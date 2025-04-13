@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily-Forge</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8a35c13b0b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <img src="./images/logo-clean.png" alt="" />
+            <div class="header-feature">
+                <h3><a href="tasks.html">Task</a></h3>
+                <h3><a href="#">Notes</a></h3>
+            </div>
+            <div class="header-mode" id="theme-toggle">
+                <i class="fa-solid fa-moon "></i>
+                <i class="fa-solid fa-sun "></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="notes-container">
+        <div class="side-bar">
+            <i id="openSearch" class="fa-solid fa-magnifying-glass search"></i>
+            <i id="openNotePopup" class="fa-solid fa-plus new-notes"></i>
+        </div>
+        <div id="searchPopup" class="searchPopup hidden">
+            <input type="text" id="searchInput" placeholder="Search notes..." />
+        </div>
+        <div class="main-area">
+            <div class="note-list" id="noteList"></div>
+        </div>
+        <div class="note-modal hidden" id="noteModal">
+            <div class="modal-content">
+                <input maxlength="35" type="text" id="noteTitle" placeholder="Enter title" />
+                <textarea id="noteContent" placeholder="Write your note..."></textarea>
+                <label id="warning" class="hidden">⚠️Add Tittle</label>
+                <div class="note-buttons">
+                    <button id="saveNote">Save</button>
+                    <button id="closeModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./common.js"></script>
+    <script src="./notes.js"></script>
+</body>
+
+</html>
